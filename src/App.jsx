@@ -57,11 +57,13 @@ function App() {
   
   const clearList = () => {
     let userInput = window.prompt("Wahin Ruk Jaa, nahi to likh 'delete mf'");
-    if (userInput === "delete mf") {
+    if (userInput === "confirm") {
       showAlert(true, "danger", "List Cleared");
       setList([]);
+    } else if (userInput !== 'delete mf') {
+      alert("Anpadh h kya");
     } else {
-      alert("Kyun bacha liya naa");
+      alert("bach gya aaj");
     }
     // showAlert(true, "danger", "List Cleared");
     // setList([]);

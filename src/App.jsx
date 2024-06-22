@@ -54,9 +54,9 @@ function App() {
     setAlert({ show, type, msg });
   };
 
-  const userInput = window.prompt("Wahin Ruk Jaa, nahi to likh 'delete mf'");
-
+  
   const clearList = () => {
+    let userInput = window.prompt("Wahin Ruk Jaa, nahi to likh 'delete mf'");
     if (userInput === "delete mf") {
       showAlert(true, "danger", "List Cleared");
       setList([]);

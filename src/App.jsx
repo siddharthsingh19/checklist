@@ -54,9 +54,17 @@ function App() {
     setAlert({ show, type, msg });
   };
 
+  const userInput = window.prompt("Wahin Ruk Jaa, nahi to likh 'delete mf'");
+
   const clearList = () => {
-    showAlert(true, "danger", "List Cleared");
-    setList([]);
+    if (userInput === "delete mf") {
+      showAlert(true, "danger", "List Cleared");
+      setList([]);
+    } else {
+      alert("Kyun bacha liya naa");
+    }
+    // showAlert(true, "danger", "List Cleared");
+    // setList([]);
   };
 
   const removeItem = (id) => {
@@ -96,9 +104,9 @@ function App() {
       {list.length > 0 && (
         <div>
           <List items={list} removeItem={removeItem} editItem={editItem} />
-          <button className="btn clear-btn" onClick={clearList}>
+        <button className="btn clear-btn" onClick={clearList}>
             Clear List
-          </button>
+         </button>
         </div>
       )}
     </div>
